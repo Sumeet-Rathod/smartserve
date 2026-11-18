@@ -1,0 +1,371 @@
+// Seed data for SmartServe platform
+
+export const INITIAL_SERVICES = [
+  {
+    id: "serv-home-repair",
+    title: "Home Repair",
+    category: "Repair & Maintenance",
+    pricePerHour: 299,
+    minHours: 1,
+    maxHours: 8,
+    description: "Expert plumbing, electrical, carpentry, appliance installation and home hardware fixes.",
+    icon: "Wrench",
+    providerCount: 38,
+    popular: true,
+    rating: 4.89,
+    reviewsCount: 1420
+  },
+  {
+    id: "serv-deep-cleaning",
+    title: "Deep Cleaning",
+    category: "Cleaning",
+    pricePerHour: 249,
+    minHours: 2,
+    maxHours: 6,
+    description: "Complete sanitized cleaning of bathrooms, kitchen grime, floors, furniture and balconies.",
+    icon: "Sparkles",
+    providerCount: 52,
+    popular: true,
+    rating: 4.92,
+    reviewsCount: 2310
+  },
+  {
+    id: "serv-tech-support",
+    title: "Tech Support",
+    category: "Technology",
+    pricePerHour: 199,
+    minHours: 1,
+    maxHours: 4,
+    description: "Home WiFi optimization, laptop diagnostics, printer setup, TV mounting and smart gadgets.",
+    icon: "Laptop",
+    providerCount: 29,
+    popular: true,
+    rating: 4.95,
+    reviewsCount: 980
+  },
+  {
+    id: "serv-gardening",
+    title: "Gardening",
+    category: "Outdoor",
+    pricePerHour: 199,
+    minHours: 2,
+    maxHours: 8,
+    description: "Balcony garden revitalization, plant pruning, organic fertilization, lawn mowing and repotting.",
+    icon: "Trees",
+    providerCount: 24,
+    popular: false,
+    rating: 4.78,
+    reviewsCount: 650
+  },
+  {
+    id: "serv-interior-painting",
+    title: "Interior Painting",
+    category: "Painting",
+    pricePerHour: 349,
+    minHours: 4,
+    maxHours: 10,
+    description: "Fresh wall coating, waterproof primers, accent feature walls, ceiling touch-ups and clean finish.",
+    icon: "Paintbrush",
+    providerCount: 31,
+    popular: false,
+    rating: 4.88,
+    reviewsCount: 890
+  },
+  {
+    id: "serv-moving-packing",
+    title: "Moving & Packing",
+    category: "Logistics",
+    pricePerHour: 399,
+    minHours: 3,
+    maxHours: 10,
+    description: "Multi-layered protective packing, heavy furniture lifting, careful transit and room placement.",
+    icon: "Truck",
+    providerCount: 45,
+    popular: false,
+    rating: 4.91,
+    reviewsCount: 1670
+  }
+];
+
+export const INITIAL_PROVIDERS = [
+  {
+    id: "prov-rajesh",
+    userId: "user-provider-rajesh",
+    name: "Rajesh Kumar",
+    email: "provider@smartserve.com",
+    role: "provider",
+    roleTitle: "Senior Repair & Painting Specialist",
+    avatar: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98111 22334",
+    services: ["serv-home-repair", "serv-interior-painting"],
+    hourlyRate: 320,
+    avgRating: 4.9,
+    totalJobs: 142,
+    isVerified: true,
+    bio: "Master technician with 9+ years experience in domestic electrical systems, precision plumbing, carpentry, and premium architectural wall painting.",
+    availability: {
+      Mon: { active: true, start: "08:00", end: "18:00" },
+      Tue: { active: true, start: "08:00", end: "18:00" },
+      Wed: { active: true, start: "08:00", end: "18:00" },
+      Thu: { active: true, start: "08:00", end: "18:00" },
+      Fri: { active: true, start: "08:00", end: "18:00" },
+      Sat: { active: true, start: "08:00", end: "18:00" },
+      Sun: { active: false, start: "09:00", end: "17:00" } // Off Sun
+    }
+  },
+  {
+    id: "prov-priya",
+    userId: "user-provider-priya",
+    name: "Priya Mehta",
+    email: "priya.cleaning@smartserve.com",
+    role: "provider",
+    roleTitle: "Certified Deep Cleaning Master",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98222 33445",
+    services: ["serv-deep-cleaning"],
+    hourlyRate: 260,
+    avgRating: 4.85,
+    totalJobs: 98,
+    isVerified: true,
+    bio: "Certified hospitality sanitation expert. Equipped with German high-pressure steam cleaners, non-toxic organic agents, and meticulous micro-dusting methods.",
+    availability: {
+      Mon: { active: true, start: "09:00", end: "17:00" },
+      Tue: { active: true, start: "09:00", end: "17:00" },
+      Wed: { active: false, start: "09:00", end: "17:00" }, // Off Wed
+      Thu: { active: true, start: "09:00", end: "17:00" },
+      Fri: { active: true, start: "09:00", end: "17:00" },
+      Sat: { active: true, start: "09:00", end: "17:00" },
+      Sun: { active: false, start: "09:00", end: "17:00" } // Off Sun
+    }
+  },
+  {
+    id: "prov-arjun",
+    userId: "user-provider-arjun",
+    name: "Arjun Patel",
+    email: "arjun.tech@smartserve.com",
+    role: "provider",
+    roleTitle: "Systems & Network Specialist",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98333 44556",
+    services: ["serv-tech-support"],
+    hourlyRate: 210,
+    avgRating: 4.95,
+    totalJobs: 215,
+    isVerified: true,
+    bio: "Ex-IT engineer with Cisco CCNA credentials. Specialized in home office mesh networks, PC hardware, smart security cams, and speedy troubleshooting.",
+    availability: {
+      Mon: { active: true, start: "09:00", end: "20:00" },
+      Tue: { active: true, start: "09:00", end: "20:00" },
+      Wed: { active: true, start: "09:00", end: "20:00" },
+      Thu: { active: true, start: "09:00", end: "20:00" },
+      Fri: { active: true, start: "09:00", end: "20:00" },
+      Sat: { active: true, start: "09:00", end: "20:00" },
+      Sun: { active: true, start: "09:00", end: "20:00" } // Available all 7 days
+    }
+  },
+  {
+    id: "prov-sunita",
+    userId: "user-provider-sunita",
+    name: "Sunita Rao",
+    email: "sunita.garden@smartserve.com",
+    role: "provider",
+    roleTitle: "Urban Botanist & Landscape Gardener",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98444 55667",
+    services: ["serv-gardening"],
+    hourlyRate: 210,
+    avgRating: 4.82,
+    totalJobs: 78,
+    isVerified: true,
+    bio: "Horticulture graduate with 6 years experience transforming apartment balconies, terrace gardens, and residential greens into thriving biophilic oases.",
+    availability: {
+      Mon: { active: true, start: "08:00", end: "16:00" },
+      Tue: { active: true, start: "08:00", end: "16:00" },
+      Wed: { active: true, start: "08:00", end: "16:00" },
+      Thu: { active: true, start: "08:00", end: "16:00" },
+      Fri: { active: true, start: "08:00", end: "16:00" },
+      Sat: { active: true, start: "08:00", end: "14:00" },
+      Sun: { active: false, start: "08:00", end: "12:00" }
+    }
+  },
+  {
+    id: "prov-vikram",
+    userId: "user-provider-vikram",
+    name: "Vikram Singh",
+    email: "vikram.moving@smartserve.com",
+    role: "provider",
+    roleTitle: "Relocation Lead & Logistics Expert",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98555 66778",
+    services: ["serv-moving-packing"],
+    hourlyRate: 410,
+    avgRating: 4.92,
+    totalJobs: 184,
+    isVerified: true,
+    bio: "12+ years heading residential transitions across metro hubs. Armed with corrugated rolls, furniture dollies, and zero-scratch guarantee.",
+    availability: {
+      Mon: { active: true, start: "08:00", end: "19:00" },
+      Tue: { active: true, start: "08:00", end: "19:00" },
+      Wed: { active: true, start: "08:00", end: "19:00" },
+      Thu: { active: true, start: "08:00", end: "19:00" },
+      Fri: { active: true, start: "08:00", end: "19:00" },
+      Sat: { active: true, start: "08:00", end: "19:00" },
+      Sun: { active: true, start: "09:00", end: "17:00" }
+    }
+  },
+  {
+    id: "prov-kavita",
+    userId: "user-provider-kavita",
+    name: "Kavita Deshmukh",
+    email: "kavita.pending@smartserve.com",
+    role: "provider",
+    roleTitle: "Junior Electrician",
+    avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=200&auto=format&fit=crop&q=80",
+    phone: "+91 98666 77889",
+    services: ["serv-home-repair"],
+    hourlyRate: 280,
+    avgRating: 4.7,
+    totalJobs: 12,
+    isVerified: false, // For testing Admin verification flow!
+    bio: "Certified wireman apprentice looking to expand service reach across residential areas.",
+    availability: {
+      Mon: { active: true, start: "09:00", end: "18:00" },
+      Tue: { active: true, start: "09:00", end: "18:00" },
+      Wed: { active: true, start: "09:00", end: "18:00" },
+      Thu: { active: true, start: "09:00", end: "18:00" },
+      Fri: { active: true, start: "09:00", end: "18:00" },
+      Sat: { active: false, start: "09:00", end: "18:00" },
+      Sun: { active: false, start: "09:00", end: "18:00" }
+    }
+  }
+];
+
+export const INITIAL_USERS = [
+  {
+    id: "user-admin",
+    name: "Platform Admin",
+    email: "admin@smartserve.com",
+    role: "admin",
+    phone: "+91 98765 43210",
+    address: "SmartServe HQ, Indiranagar, Bengaluru, KA 560038",
+    isActive: true,
+    createdAt: "2026-01-01T00:00:00.000Z"
+  },
+  {
+    id: "user-provider-rajesh",
+    name: "Rajesh Kumar",
+    email: "provider@smartserve.com",
+    role: "provider",
+    phone: "+91 98111 22334",
+    address: "HSR Layout Sector 2, Bengaluru, KA 560102",
+    isActive: true,
+    createdAt: "2026-01-15T08:30:00.000Z"
+  },
+  {
+    id: "user-customer",
+    name: "Ananya Sharma",
+    email: "user@smartserve.com",
+    role: "customer",
+    phone: "+91 99887 66554",
+    address: "Flat 402, Green Glen Heights, Bellandur, Bengaluru, Karnataka 560103",
+    isActive: true,
+    createdAt: "2026-02-10T11:20:00.000Z"
+  }
+];
+
+export const INITIAL_BOOKINGS = [
+  {
+    id: "bk-10021",
+    bookingId: "BK-10021",
+    customerId: "user-customer",
+    customerName: "Ananya Sharma",
+    customerEmail: "user@smartserve.com",
+    customerPhone: "+91 99887 66554",
+    providerId: "prov-priya",
+    providerName: "Priya Mehta",
+    serviceId: "serv-deep-cleaning",
+    serviceTitle: "Deep Cleaning",
+    serviceIcon: "Sparkles",
+    status: "Completed",
+    scheduledDate: "2026-11-10",
+    scheduledTime: "10:00 AM",
+    hours: 3,
+    baseAmount: 780,
+    peakSurcharge: 195,
+    weekendSurcharge: 0,
+    expressSurcharge: 0,
+    platformFee: 48.75,
+    totalAmount: 1024,
+    address: "Flat 402, Green Glen Heights, Bellandur, Bengaluru, Karnataka 560103",
+    notes: "Please focus on kitchen grease and master bathroom tiles.",
+    hasReview: true,
+    createdAt: "2026-11-08T10:15:00.000Z"
+  },
+  {
+    id: "bk-10048",
+    bookingId: "BK-10048",
+    customerId: "user-customer",
+    customerName: "Ananya Sharma",
+    customerEmail: "user@smartserve.com",
+    customerPhone: "+91 99887 66554",
+    providerId: "prov-rajesh",
+    providerName: "Rajesh Kumar",
+    serviceId: "serv-home-repair",
+    serviceTitle: "Home Repair",
+    serviceIcon: "Wrench",
+    status: "In Progress",
+    scheduledDate: "2026-11-18",
+    scheduledTime: "11:00 AM",
+    hours: 2,
+    baseAmount: 640,
+    peakSurcharge: 160,
+    weekendSurcharge: 0,
+    expressSurcharge: 64,
+    platformFee: 43.2,
+    totalAmount: 907,
+    address: "Flat 402, Green Glen Heights, Bellandur, Bengaluru, Karnataka 560103",
+    notes: "Leaking pipe under kitchen sink and loosened switchboard in study.",
+    hasReview: false,
+    createdAt: "2026-11-18T08:00:00.000Z"
+  },
+  {
+    id: "bk-10052",
+    bookingId: "BK-10052",
+    customerId: "user-customer",
+    customerName: "Ananya Sharma",
+    customerEmail: "user@smartserve.com",
+    customerPhone: "+91 99887 66554",
+    providerId: "prov-arjun",
+    providerName: "Arjun Patel",
+    serviceId: "serv-tech-support",
+    serviceTitle: "Tech Support",
+    serviceIcon: "Laptop",
+    status: "Confirmed",
+    scheduledDate: "2026-11-20",
+    scheduledTime: "02:00 PM",
+    hours: 2,
+    baseAmount: 420,
+    peakSurcharge: 0,
+    weekendSurcharge: 0,
+    expressSurcharge: 0,
+    platformFee: 21,
+    totalAmount: 441,
+    address: "Flat 402, Green Glen Heights, Bellandur, Bengaluru, Karnataka 560103",
+    notes: "Configure secondary mesh router and fix smart TV audio lag.",
+    hasReview: false,
+    createdAt: "2026-11-16T14:40:00.000Z"
+  }
+];
+
+export const INITIAL_REVIEWS = [
+  {
+    id: "rev-1",
+    bookingId: "BK-10021",
+    customerId: "user-customer",
+    customerName: "Ananya Sharma",
+    providerId: "prov-priya",
+    rating: 5,
+    comment: "Priya did an outstanding job! The bathroom looks brand new and kitchen tiles are spotless. Arrived promptly with top notch gear.",
+    createdAt: "2026-11-10T14:20:00.000Z"
+  }
+];
